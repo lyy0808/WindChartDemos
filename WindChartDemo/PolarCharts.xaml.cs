@@ -50,7 +50,7 @@ namespace WindChartDemo
 
             cs.Rmax = 0.5;
             cs.Rmin = 0;
-            cs.NTicks = 4;
+            cs.NTicks = 8;
             cs.AngleStep = 30;
             cs.AngleDirection = ChartStylePolar.AngleDirectionEnum.CounterClockWise;
             cs.LinePattern = ChartStylePolar.LinePatternEnum.Dot;
@@ -78,7 +78,7 @@ namespace WindChartDemo
 
             cs.Rmax = 1.0;
             cs.Rmin = -7.0;
-            cs.NTicks = 4;
+            cs.NTicks = 8;
             cs.AngleStep = 30;
             cs.AngleDirection = ChartStylePolar.AngleDirectionEnum.CounterClockWise;
             cs.LinePattern = ChartStylePolar.LinePatternEnum.Dot;
