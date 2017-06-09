@@ -41,5 +41,7 @@ namespace WindChartDemo
                 j++;
             }
         }
+
+       
     }
 }

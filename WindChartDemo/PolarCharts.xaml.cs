@@ -76,8 +76,8 @@ namespace WindChartDemo
             dc = new DataCollectionPolar();
             cs.ChartCanvas = chartCanvas;
 
-            cs.Rmax = 1.0;
-            cs.Rmin = -7.0;
+            cs.Rmax = 0;
+            cs.Rmin = -7;
             cs.NTicks = 8;
             cs.AngleStep = 30;
             cs.AngleDirection = ChartStylePolar.AngleDirectionEnum.CounterClockWise;
@@ -88,6 +88,7 @@ namespace WindChartDemo
             dc.DataList.Clear();
             ds = new DataSeries();
             ds.LineColor = Brushes.Red;
+            ds.Symbols = new Symbols { SymbolType = Symbols.SymbolTypeEnum.Square, BorderThickness = 1, SymbolSize = 10, BorderColor = Brushes.Black, FillColor = Brushes.Chocolate };
             for (int i = 0; i < 360; i++)
             {
                 double theta = 1.0 * i;
@@ -98,10 +99,31 @@ namespace WindChartDemo
 
             ds = new DataSeries();
             ds.LineColor = Brushes.Blue;
+            ds.Symbols = new Symbols { SymbolType = Symbols.SymbolTypeEnum.Square, BorderThickness = 1, SymbolSize = 10, BorderColor = Brushes.Black, FillColor = Brushes.Blue };
             for (int i = 0; i < 360; i++)
             {
                 double theta = 1.0 * i;
                 double r = Math.Log(1.001 + Math.Cos(2 * theta * Math.PI / 180));
+                ds.LineSeries.Points.Add(new Point(theta, r));
+            }
+            dc.DataList.Add(ds);
+
+            dc.AddPolar(cs);
+        }
+
+        private void Btn_change_Click(object sender, RoutedEventArgs e)
+        {
+            AddChart();
+
+
+            dc.DataList.Clear();
+            dc.ClearLines(cs);
+            Random rd = new Random();
+           
+            for (int i = 0; i < 20; i++)
+            {
+                double theta = 1.0 * i;
+                double r = rd.Next(-7, 0); 
                 ds.LineSeries.Points.Add(new Point(theta, r));
             }
             dc.DataList.Add(ds);

@@ -19,35 +19,71 @@ namespace WindChartDemo
 
         public Canvas ChartCanvas { get; set; }
 
+        ///=================================================================================================
+        /// <summary> 线模式. </summary>
+        ///
+        /// <value> The line pattern. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public LinePatternEnum LinePattern
         {
             get { return linePattern; }
             set { linePattern = value; }
         }
-        
+
+        ///=================================================================================================
+        /// <summary>  线厚度. </summary>
+        ///
+        /// <value> The line thickness. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public double LineThickness
         {
             get { return lineThickness; }
             set { lineThickness = value; }
         }
-        
+
+        ///=================================================================================================
+        /// <summary>   线颜色. </summary>
+        ///
+        /// <value> The color of the line. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public Brush LineColor
         {
             get { return lineColor; }
             set { lineColor = value; }
         }
 
+        ///=================================================================================================
+        /// <summary>   圈与圈之间的刻度. </summary>
+        ///
+        /// <value> The n ticks. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public int NTicks
         {
             get { return nTicks; }
             set { nTicks = value; }
         }
-                
+
+        ///=================================================================================================
+        /// <summary>   最大高度. </summary>
+        ///
+        /// <value> The rmax. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public double Rmax
         {
             get { return rmax; }
             set { rmax = value; }
         }
+
+        ///=================================================================================================
+        /// <summary>   最小高度. </summary>
+        ///
+        /// <value> The rmin. </value>
+        ///-------------------------------------------------------------------------------------------------
 
         public double Rmin
         {
@@ -55,21 +91,41 @@ namespace WindChartDemo
             set { rmin = value; }
         }
 
+        ///=================================================================================================
+        /// <summary>   角度转动方向. </summary>
+        ///
+        /// <value> The angle direction. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public AngleDirectionEnum AngleDirection
         {
             get { return angleDirection; }
             set { angleDirection = value; }
         }
-        
+
+        ///=================================================================================================
+        /// <summary>   旋转角步长. </summary>
+        ///
+        /// <value> The angle step. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public double AngleStep
         {
             get { return angleStep; }
             set { angleStep = value; }
         }
 
+        ///=================================================================================================
+        /// <summary>   角度方向. </summary>
+        ///
+        /// <remarks>   lyy, 2017:6:9_9:21:43. </remarks>
+        ///-------------------------------------------------------------------------------------------------
+
         public enum AngleDirectionEnum
         {
+            /// <summary>   逆时针. </summary>
             CounterClockWise = 0,
+            /// <summary>   顺时针. </summary>
             ClockWise = 1
         }
 
@@ -101,13 +157,29 @@ namespace WindChartDemo
             return result;
         }
 
+        ///=================================================================================================
+        /// <summary>   线模式. </summary>
+        ///
+        /// <remarks>   lyy, 2017:6:9_9:23:59. </remarks>
+        ///-------------------------------------------------------------------------------------------------
+
         public enum LinePatternEnum
         {
+            /// <summary>  实线 An enum constant representing the solid option. </summary>
             Solid = 1,
+            /// <summary>  短线 An enum constant representing the dash option. </summary>
             Dash = 2,
+            /// <summary>  点线 An enum constant representing the dot option. </summary>
             Dot = 3,
+            /// <summary> 点画线  An enum constant representing the dash dot option. </summary>
             DashDot = 4
         }
+
+        ///=================================================================================================
+        /// <summary>  设置极坐标系. </summary>
+        ///
+        /// <remarks>   lyy, 2017:6:9_9:25:56. </remarks>
+        ///-------------------------------------------------------------------------------------------------
 
         public void SetPolarAxes()
         {

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="PolarCharts" Height="300" Width="300">
     <Grid>
+        
         <Grid Name="grid1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="30"/>
@@ -23,6 +24,7 @@ ClipToBounds="False" Background="Transparent"
 SizeChanged="chartGrid_SizeChanged" />
             <Canvas Margin="2" Name="chartCanvas" ClipToBounds="False"
 Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="btn_change" Width="30" Height="30" Content="click" Click="Btn_change_Click"/>
         </Grid>
     </Grid>
 </Window>

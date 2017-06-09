@@ -90,7 +90,7 @@ namespace WindChartDemo
             switch (SymbolType)
             {
                 case SymbolTypeEnum.Square:
-                    plg.Fill = Brushes.White;
+                    plg.Fill = fillColor;
                     plg.Points.Add(new Point(pt.X - halfSize, pt.Y - halfSize));
                     plg.Points.Add(new Point(pt.X + halfSize, pt.Y - halfSize));
                     plg.Points.Add(new Point(pt.X + halfSize, pt.Y + halfSize));
